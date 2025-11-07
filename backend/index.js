@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://kharchapani-bay.vercel.app/",
+    origin: "https://kharchapani-bay.vercel.app",
     credentials: true,
   })
 );
