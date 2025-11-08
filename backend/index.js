@@ -16,7 +16,7 @@ app.use(cors({
     "http://localhost:5173",
     "https://kharchapani-bay.vercel.app"
   ],
-  credentials: true
+  credentials: true,
 }));
 
 app.use(cookieParser());

@@ -89,8 +89,9 @@ route.post("/login", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, 
-      sameSite: "none", 
+      secure: process.env.NODE_ENV === "production", // only true in Render
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // allow Vercel↔Render cookies
+      path: "/", // make cookie available to all routes
       maxAge: 60 * 60 * 1000,
     });
 
