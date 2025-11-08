@@ -10,7 +10,9 @@ route.get("/check", verifyToken, async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
     if (!user) {
-      return res.status(404).json({ status: "failed", message: "User not found" });
+      return res
+        .status(404)
+        .json({ status: "failed", message: "User not found" });
     }
 
     res.status(200).json({
@@ -26,8 +28,6 @@ route.get("/check", verifyToken, async (req, res) => {
     res.status(500).json({ status: "failed", message: "serverError" });
   }
 });
-
-
 
 route.post("/register", async (req, res) => {
   try {
@@ -52,7 +52,7 @@ route.post("/register", async (req, res) => {
 
     const token = jwt.sign(
       { id: newUser._id, email: newUser.email },
-      process.env.JWT_SECRET ,
+      process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
 
@@ -66,7 +66,6 @@ route.post("/register", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
-
 
 route.post("/login", async (req, res) => {
   try {
@@ -84,15 +83,14 @@ route.post("/login", async (req, res) => {
 
     const token = jwt.sign(
       { id: user._id, email: user.email },
-      process.env.JWT_SECRET ,
+      process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
 
- 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false, 
-      sameSite: "lax",
+      secure: true, 
+      sameSite: "none", 
       maxAge: 60 * 60 * 1000,
     });
 

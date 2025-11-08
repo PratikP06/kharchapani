@@ -14,6 +14,7 @@ const api = {
     const res = await fetch(`${API_URL}/user/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: 'include',
       body: JSON.stringify(data),
     });
     return res.json();
