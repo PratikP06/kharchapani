@@ -5,6 +5,17 @@ Built using **React (Vite)** for the frontend and **Node.js + Express + MongoDB*
 
 ---
 
+### Live Link
+https://kharchapani-bay.vercel.app/
+
+### 🧑‍💻 Tech Stack
+
+Frontend: React, Vite, CSS
+Backend: Node.js, Express.js, MongoDB
+Auth: JWT + Cookies
+
+---
+
 ## 🚀 Features
 - Add, view, and delete transactions (income + expenses)
 - Auto updates total balance
@@ -43,3 +54,6 @@ kharchapani/
 │
 
 └── README.md
+
+---
+
