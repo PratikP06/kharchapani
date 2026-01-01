@@ -13,7 +13,9 @@ https://kharchapani-bay.vercel.app/
 ### 🧑‍💻 Tech Stack
 
 Frontend: React, Vite, CSS.
+
 Backend: Node.js, Express.js, MongoDB.
+
 Auth: JWT + Cookies.
 
 ---
