@@ -15,3 +15,31 @@ Built using **React (Vite)** for the frontend and **Node.js + Express + MongoDB*
 ---
 
 ## 🧱 Project Structure
+
+kharchapani/
+
+├── backend/ # Node.js + Express + MongoDB API
+
+│ ├── routes/
+
+│ ├── middleware/
+
+│ ├── model/
+
+│ ├── index.js
+
+│ └── .env
+
+│
+
+├── frontend/expense/ # React (Vite) frontend
+
+│ ├── src/
+
+│ ├── public/
+
+│ └── vite.config.js
+
+│
+
+└── README.md
